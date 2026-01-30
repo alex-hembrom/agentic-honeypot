@@ -9,7 +9,7 @@ GOOGLE_API_KEY = os.getenv("GEMINI_API_KEY")
 
 # 2. Configure Gemini
 genai.configure(api_key=GOOGLE_API_KEY)
-model = genai.GenerativeModel('gemini-2.0-flash')
+model = genai.GenerativeModel('gemini-pro')
 
 # --- HELPER: FAKE DATA GENERATOR ---
 def generate_fake_data(data_type):
