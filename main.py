@@ -12,6 +12,11 @@ HACKATHON_API_KEY = os.getenv("HACKATHON_API_KEY")
 
 app = FastAPI()
 
+# --- 1. NEW: HOME PAGE (Fixes the 404 Error) ---
+@app.get("/")
+def home():
+    return {"message": "Alex's AI Agent is awake and running!"}
+
 # --- BACKGROUND TASK ---
 def send_callback(session_id, scam_detected, total_msgs, intel, notes):
     url = "https://hackathon.guvi.in/api/updateHoneyPotFinalResult"
